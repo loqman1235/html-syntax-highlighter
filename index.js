@@ -4,17 +4,21 @@ const codeContent = `
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="html-syntax-highlighter.css" />
+    <title>Syntax Highlighter</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1 class="heading" style="">Hello world</h1>
     <!-- this is a comment -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque molestias repudiandae voluptatibus corrupti autem dolores nemo atque ullam illum at, earum placeat natus quos, itaque deleniti illo qui non!</p>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque molestias       repudiandae voluptatibus corrupti autem dolores nemo atque ullam illum at, earum placeat natus quos, itaque deleniti illo qui non!
+      </p>
+    </div>
     <!-- this is a comment -->
   </body>
 
-  <script src="/script.js" defer='sdsd'></script>
+  <script src="/script.js" defer></script>
 </html>
 `.trim();
 
