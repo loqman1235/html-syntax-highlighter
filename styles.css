@@ -18,38 +18,48 @@
   --strings-color: #34d59f;
 }
 
-.light-theme {
-  --bg-color: #f5f5f5;
-  --default-color: #17181a;
-  --tags-color: #009adc;
-  --brackets-color: #5e6a6b;
-  --comments-color: #587f46;
-  --attributes-color: #cbaa00;
-  --strings-color: #2ab486;
-}
-
 body {
   min-height: 100vh;
   display: grid;
   place-items: center;
   padding: 40px;
+  background-color: var(--bg-color);
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+}
+
+.editor {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  overflow: auto;
+  background-color: var(--bg-color);
+  color: var(--default-color);
+  outline: none;
 }
 
 .output {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow-y: auto;
+  white-space: pre-wrap;
   background-color: var(--bg-color);
   color: var(--default-color);
-  padding: 20px;
-  min-width: 400px;
-  max-width: 800px;
-}
-
-code {
-  white-space: pre-wrap;
   font-family: "Fira Code", monospace;
-  /* display: inline-table; */
-  overflow-x: auto;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .highlight-tags {

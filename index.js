@@ -1,28 +1,10 @@
-const codeContent = `
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syntax Highlighter</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <h1 class="heading" style="">Hello world</h1>
-    <!-- this is a comment -->
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque molestias       repudiandae voluptatibus corrupti autem dolores nemo atque ullam illum at, earum placeat natus quos, itaque deleniti illo qui non!
-      </p>
-    </div>
-    <!-- this is a comment -->
-  </body>
-
-  <script src="/script.js" defer></script>
-</html>
-`.trim();
-
 const codeElement = document.getElementById("code");
+const previewElement = document.getElementById("preview");
+
+codeElement.addEventListener("input", () => {
+  const highlightedCode = syntaxHighlighter(codeElement.value);
+  previewElement.innerHTML = highlightedCode;
+});
 
 const escapeHTML = (str) => {
   return str
@@ -35,8 +17,6 @@ const escapeHTML = (str) => {
 
 const syntaxHighlighter = (code) => {
   code = escapeHTML(code);
-
-  console.log(code);
 
   const rules = {
     attributes: /(?<=\s)\w+(?=\=)|(?<=\s)\w+(?=&gt;)/g,
@@ -54,5 +34,3 @@ const syntaxHighlighter = (code) => {
 
   return code;
 };
-
-codeElement.innerHTML = syntaxHighlighter(codeContent);
