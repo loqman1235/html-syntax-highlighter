@@ -36,30 +36,32 @@ body {
 
 .editor {
   flex: 1;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
   font-family: "Fira Code", monospace;
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #3a3a3a;
+  border-radius: 0px;
   resize: none;
   overflow: auto;
   background-color: var(--bg-color);
   color: var(--default-color);
   outline: none;
+  border-radius: 8px 8px 0 0;
 }
 
 .output {
   flex: 1;
-  padding: 10px;
+  padding: 20px;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid #3a3a3a;
   border-top: none;
   overflow-y: auto;
   white-space: pre-wrap;
   background-color: var(--bg-color);
   color: var(--default-color);
   font-family: "Fira Code", monospace;
+  border-radius: 0 0 8px 8px;
 }
 
 .highlight-tags {
